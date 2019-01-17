@@ -17,7 +17,7 @@ import javax.swing.JButton;
 
 public class Home {
 
-	private JFrame customer_details;
+	public JFrame customer_details;
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_3;
@@ -121,8 +121,9 @@ public class Home {
 		btnSave.setBounds(212, 303, 89, 23);
 		customer_details.getContentPane().add(btnSave);
 		
-		//we can use DI here
+		//we used DI here
 		btnSave.addActionListener(theHomeController);
+		
 		
 		
 		JButton btnReset = new JButton("Reset");
@@ -131,11 +132,18 @@ public class Home {
 		customer_details.getContentPane().add(btnReset);
 		
 		JButton btnNewSim = new JButton("Add new SIM");
-		btnNewSim.setBounds(468, 175, 110, 23);
+		btnNewSim.setBounds(468, 175, 121, 23);
 		customer_details.getContentPane().add(btnNewSim);
 		
+		//DI
+		btnNewSim.addActionListener(theHomeController);
+		
 		JButton btnNewPlan = new JButton("Add new Plan");
-		btnNewPlan.setBounds(468, 212, 110, 23);
+		btnNewPlan.setBounds(468, 212, 121, 23);
 		customer_details.getContentPane().add(btnNewPlan);
+		
+		
+		
+		
 	}
 }
