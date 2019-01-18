@@ -7,6 +7,7 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -18,9 +19,11 @@ import javax.swing.JButton;
 public class Home {
 
 	public JFrame customer_details;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_3;
+	public static JTextField cust_name;
+	public static JTextField textField_1;
+	public static JTextField textField_3;
+	
+	@Autowired
 	private static HomeController theHomeController;
 
 	/**
@@ -31,7 +34,7 @@ public class Home {
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		
 		//getting bean from IOC
-		theHomeController = (HomeController)context.getBean("home");
+		theHomeController = (HomeController)context.getBean("homeController");
 		
 		
 		
@@ -54,6 +57,7 @@ public class Home {
 		initialize();
 	}
 
+	
 	/**
 	 * Initialize the contents of the frame.
 	 */
@@ -94,10 +98,10 @@ public class Home {
 		lblBalance.setBounds(143, 252, 92, 14);
 		customer_details.getContentPane().add(lblBalance);
 		
-		textField = new JTextField();
-		textField.setBounds(280, 103, 178, 20);
-		customer_details.getContentPane().add(textField);
-		textField.setColumns(10);
+		cust_name = new JTextField();
+		cust_name.setBounds(280, 103, 178, 20);
+		customer_details.getContentPane().add(cust_name);
+		cust_name.setColumns(10);
 		
 		textField_1 = new JTextField();
 		textField_1.setColumns(10);
