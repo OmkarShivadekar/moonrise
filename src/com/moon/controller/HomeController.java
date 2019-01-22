@@ -15,6 +15,7 @@ import com.moon.view.NewSim;
 
 @Component
 public class HomeController implements ActionListener {
+	
 
 
 	private String name;
