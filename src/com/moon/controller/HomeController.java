@@ -2,8 +2,6 @@ package com.moon.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.HashMap;
 
 import javax.swing.JOptionPane;
 
@@ -12,6 +10,7 @@ import org.springframework.stereotype.Component;
 
 import com.moon.view.Home;
 import com.moon.view.NewSim;
+import com.moon.view.Plan;
 
 @Component
 public class HomeController implements ActionListener {
@@ -22,6 +21,9 @@ public class HomeController implements ActionListener {
 	
 	@Autowired
 	NewSim sim;
+	
+	@Autowired
+	Plan plan;
 	
 	
 	
@@ -50,6 +52,9 @@ public class HomeController implements ActionListener {
 			
 			//ss.customer_details.dispatchEvent(new WindowEvent(ss.customer_details, WindowEvent.WINDOW_CLOSING));
 			
+			
+		}else if(e.getActionCommand().equals("Add new Plan")){
+			plan.frame.setVisible(true);
 			
 		}
 		
