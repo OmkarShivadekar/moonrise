@@ -46,6 +46,8 @@ public class NewSim {
 		frmAddNewSim.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frmAddNewSim.getContentPane().setLayout(null);
 		
+		System.out.println("Omkar /...");
+		System.out.println("Mayur /...");
 		
 		
 		JButton btnHome = new JButton("Home");
