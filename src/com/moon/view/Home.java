@@ -141,10 +141,12 @@ public class Home {
 		
 		//DI
 		btnNewSim.addActionListener(theHomeController);
+		//btnNewSim.addActionListener(new A);
 		
 		JButton btnNewPlan = new JButton("Add new Plan");
 		btnNewPlan.setBounds(468, 212, 121, 23);
 		customer_details.getContentPane().add(btnNewPlan);
+		btnNewPlan.addActionListener(theHomeController);
 		
 		
 		
