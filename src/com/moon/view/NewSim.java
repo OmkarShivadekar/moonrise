@@ -47,6 +47,7 @@ public class NewSim {
 		frmAddNewSim.getContentPane().setLayout(null);
 		
 		System.out.println("Neha /...");
+		System.out.println("Mayur /...");
 		
 		JButton btnHome = new JButton("Home");
 		btnHome.setBounds(77, 138, 89, 23);
